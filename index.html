@@ -3,7 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Никитин Владислав Витальевич</title>
+    
+    <!-- ОСНОВНЫЕ SEO-МЕТАТЕГИ (яндекс / google) -->
+    <title>Никитин Владислав Витальевич — официальная страница</title>
+    <meta name="description" content="Никитин Владислав Витальевич. Персональный сайт. Информация, контакты, административное дело.">
+    <meta name="keywords" content="Никитин Владислав Витальевич, Никитин Владислав, Витальевич, официальный сайт, административное дело">
+    <meta name="author" content="Никитин Владислав Витальевич">
+    <meta name="robots" content="index, follow">
+    <meta name="yandex-verification" content="ваш_код_подтверждения_яндекс"> <!-- замените на реальный код -->
+    <meta name="google-site-verification" content="ваш_код_подтверждения_google" /> <!-- замените на реальный код -->
+    
+    <!-- КАНОНИЧЕСКАЯ ССЫЛКА (чтобы склеить дубли) -->
+    <link rel="canonical" href="https://ivanushkafo.github.io/название-репозитория/">
+    
+    <!-- OPEN GRAPH (для соцсетей + яндекс) -->
+    <meta property="og:title" content="Никитин Владислав Витальевич">
+    <meta property="og:description" content="Персональная страница Никитина Владислава Витальевича">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ivanushkafo.github.io/название-репозитория/">
+    <meta property="og:image" content="https://ivanushkafo.github.io/название-репозитория/preview.jpg"> <!-- если будет картинка -->
+    
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Никитин Владислав Витальевич">
+    <meta name="twitter:description" content="Никитин Владислав Витальевич — персональная страница">
+    
+    <!-- МИКРОРАЗМЕТКА Schema.org (для google) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "Никитин Владислав Витальевич",
+            "givenName": "Владислав",
+            "familyName": "Никитин",
+            "patronymic": "Витальевич",
+            "description": "Персональная страница. Информация об административном деле.",
+            "url": "https://ivanushkafo.github.io/название-репозитория/"
+        }
+    }
+    </script>
+
+    <!-- ДОПОЛНИТЕЛЬНАЯ РАЗМЕТКА (Яндекс особенно любит чистые заголовки) -->
+    <meta property="ya:title" content="Никитин Владислав Витальевич">
+    <meta property="ya:description" content="Официальная страница Никитина Владислава Витальевича">
+
     <style>
         * {
             margin: 0;
@@ -12,7 +57,7 @@
         }
 
         body {
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: #ffffff;
             min-height: 100vh;
             display: flex;
@@ -44,7 +89,7 @@
             letter-spacing: -0.02em;
         }
 
-        /* центральная фраза — без дефисов, просто текст */
+        /* центральная фраза */
         .statement {
             font-size: clamp(2rem, 7vw, 3.8rem);
             font-weight: 500;
@@ -96,7 +141,7 @@
             overflow: hidden;
             pointer-events: none;
         }
-
+        
         @media (max-width: 450px) {
             .card {
                 padding: 2rem 1.2rem;
@@ -107,24 +152,34 @@
 </head>
 <body>
     <div class="card">
-        <!-- 1. Имя (Никитин Владислав Витальевич) -->
+        <!-- 1. Имя (главный заголовок h1 для поисковиков) -->
         <h1 class="name">Никитин Владислав Витальевич</h1>
 
-        <!-- 2. Фраза (кидает партнёров) — чистый текст, никаких чёрточек сверху/снизу -->
-        <div class="statement">кидает партнёров</div>
+        <!-- 2. Фраза (с дополнительным семантическим акцентом) -->
+        <div class="statement" aria-label="основная характеристика">кидает партнёров</div>
 
-        <!-- 3. Строка про административное дело (как на вашем скриншоте) -->
+        <!-- 3. Строка про административное дело -->
         <div class="admin-line">Заведено административное дело №</div>
 
-        <!-- 4. Подвал с github (размещено на GitHub) -->
+        <!-- 4. Подвал с github -->
         <div class="github-footer">
-            <span>⎇</span>
+            <span aria-hidden="true">⎇</span>
             <span>размещено на</span>
             <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
 
-        <!-- технический комментарий (соответствие скриншоту) -->
-        <div class="hidden-note">Никитин Владислав Витальевич --- кидает партнёров // административное дело №</div>
+        <!-- технический комментарий (для соответствия скриншоту) -->
+        <div class="hidden-note">Никитин Владислав Витальевич - кидает партнёров // административное дело №</div>
+    </div>
+    
+    <!-- Дополнительный скрытый SEO-блок (улучшает ранжирование по точному имени) -->
+    <div style="display:none;">
+        <span itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Никитин Владислав Витальевич</span>
+            <span itemprop="givenName">Владислав</span>
+            <span itemprop="familyName">Никитин</span>
+            <span itemprop="patronymic">Витальевич</span>
+        </span>
     </div>
 </body>
 </html>
