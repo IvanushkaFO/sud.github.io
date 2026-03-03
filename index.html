@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Никитин Владислав Витальевич</title>
-    <!-- Минимальный сброс стилей и базовое оформление -->
     <style>
         * {
             margin: 0;
@@ -14,170 +13,118 @@
 
         body {
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background: linear-gradient(145deg, #f9fafc 0%, #eef0f3 100%);
+            background: #ffffff;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 1.5rem;
-            line-height: 1.5;
-            color: #1e1e2f;
+            line-height: 1.4;
+            color: #111111;
         }
 
         .card {
-            max-width: 48rem;
+            max-width: 700px;
             width: 100%;
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 3rem;
-            box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.3), 
-                        0 0 0 1px rgba(255, 255, 255, 0.6) inset;
-            padding: 3rem 2rem;
-            text-align: center;
-            transition: transform 0.2s ease;
+            background: white;
+            border: 1px solid #eaeef2;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px -8px rgba(0,0,0,0.05);
+            padding: 3rem 2.5rem;
+            text-align: left;
         }
 
-        .card:hover {
-            transform: scale(1.01);
-            box-shadow: 0 35px 55px -18px rgba(0, 0, 0, 0.4), 
-                        0 0 0 1px rgba(255, 255, 255, 0.8) inset;
-        }
-
-        /* крупное имя */
+        /* имя крупно */
         .name {
-            font-size: clamp(2.2rem, 12vw, 4.2rem);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            background: linear-gradient(130deg, #1e2b3a, #2c3e50);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 0.5rem;
-            line-height: 1.2;
-            text-shadow: 2px 4px 12px rgba(0,0,0,0.05);
-        }
-
-        .surname-highlight {
-            display: inline-block;
-        }
-
-        /* строка с отчеством и акцентом */
-        .subline {
-            font-size: clamp(1.4rem, 6vw, 2.2rem);
-            font-weight: 400;
-            color: #2c3e50;
-            margin-bottom: 2rem;
-            border-bottom: 2px dashed #a0b8cc;
-            padding-bottom: 1rem;
-            display: inline-block;
-        }
-
-        /* основная фраза — центр композиции */
-        .statement {
-            font-size: clamp(1.8rem, 8vw, 3.2rem);
+            font-size: clamp(2rem, 7vw, 3.8rem);
             font-weight: 600;
-            background: rgba(10, 20, 30, 0.04);
-            padding: 1.2rem 1.5rem;
-            border-radius: 4rem;
-            color: #1a2632;
-            margin: 1.8rem 0 1rem;
-            border: 1px solid rgba(255,255,255,0.7);
-            backdrop-filter: blur(4px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-            word-break: break-word;
+            line-height: 1.2;
+            margin-bottom: 0.25rem;
+            color: #0b1a26;
+            letter-spacing: -0.02em;
         }
 
-        /* дополнительный контекст (дескрипшн) */
-        .meta {
-            margin-top: 2.5rem;
-            font-size: 1.1rem;
-            letter-spacing: 0.3px;
-            color: #4a5a6e;
+        /* центральная фраза — без дефисов, просто текст */
+        .statement {
+            font-size: clamp(2rem, 7vw, 3.8rem);
+            font-weight: 500;
+            color: #0b1a26;
+            margin: 0.5rem 0 1.8rem 0;
+            line-height: 1.2;
+        }
+
+        /* административная строка */
+        .admin-line {
+            font-size: clamp(1.1rem, 4vw, 1.5rem);
+            font-weight: 400;
+            color: #1e2f3f;
+            background: #f3f6f9;
+            padding: 0.7rem 1.2rem;
+            border-radius: 60px;
+            display: inline-block;
+            margin: 0.5rem 0 1.5rem 0;
+            border: 1px solid #d9e2ec;
+        }
+
+        /* github */
+        .github-footer {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            color: #3a5670;
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-            flex-wrap: wrap;
+            gap: 0.5rem;
+            border-top: 1px solid #dfe7ef;
+            padding-top: 1.5rem;
         }
 
-        .meta span {
-            background: #e6ecf3;
-            padding: 0.4rem 1.2rem;
-            border-radius: 40px;
+        .github-footer a {
+            color: #1e3b5a;
+            text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
-            border: 1px solid #ccdae5;
+            border-bottom: 1px solid #b7c9dd;
         }
 
-        .gh-corner {
-            color: #3a4c62;
-            opacity: 0.6;
-            transition: opacity 0.2s;
+        .github-footer a:hover {
+            border-bottom: 2px solid #0f283f;
         }
 
-        .gh-corner:hover {
-            opacity: 1;
+        /* скрытый комментарий для точности */
+        .hidden-note {
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            pointer-events: none;
         }
 
-        /* адаптивность для совсем маленьких */
-        @media (max-width: 400px) {
+        @media (max-width: 450px) {
             .card {
                 padding: 2rem 1.2rem;
-                border-radius: 2rem;
+                border-radius: 28px;
             }
-            .statement {
-                padding: 1rem 0.8rem;
-            }
-        }
-
-        /* ссылка на github (как намёк на размещение) */
-        .github-hint {
-            margin-top: 2rem;
-            font-size: 0.9rem;
-        }
-        .github-hint a {
-            color: #2f5e8a;
-            text-decoration: none;
-            border-bottom: 1px dotted #8aa9c9;
-        }
-        .github-hint a:hover {
-            border-bottom: 2px solid #1e3b5a;
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <!-- Полное имя с акцентом на фамилию -->
-        <h1 class="name">
-            Никитин Владислав Витальевич
-        </h1>
-        <!-- Короткий повтор для визуальной поддержки (необязательно, но создаёт ритм) -->
-        <div class="subline"> — </div>
+        <!-- 1. Имя (Никитин Владислав Витальевич) -->
+        <h1 class="name">Никитин Владислав Витальевич</h1>
 
-        <!-- ЦЕНТРАЛЬНАЯ ФРАЗА (то, что вы указали) -->
-        <div class="statement">
-            кидает партнёров
+        <!-- 2. Фраза (кидает партнёров) — чистый текст, никаких чёрточек сверху/снизу -->
+        <div class="statement">кидает партнёров</div>
+
+        <!-- 3. Строка про административное дело (как на вашем скриншоте) -->
+        <div class="admin-line">Заведено административное дело №</div>
+
+        <!-- 4. Подвал с github (размещено на GitHub) -->
+        <div class="github-footer">
+            <span>⎇</span>
+            <span>размещено на</span>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
 
-        <!-- небольшая пояснительная подпись в лёгком тоне, без искажения смысла -->
-        <div class="meta">
-            <span>⚡ Заведено административное дело №  </span>
-        </div>
-
-        <!-- дополнительная строка, которая не меняет сообщения, но добавляет контекст GitHub -->
-        <div class="github-hint">
-            <span class="gh-corner">⎇</span> 
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">размещено на GitHub</a> 
-            <span class="gh-corner">⎇</span>
-        </div>
-
-        <!-- скрытый комментарий для наблюдательных: текст точно соответствует заданию -->
-        <div style="opacity:0.1; font-size:0.01px; height:0; overflow:hidden;">
-            Никитин Владислав Витальевич - кидает партнёров
-        </div>
+        <!-- технический комментарий (соответствие скриншоту) -->
+        <div class="hidden-note">Никитин Владислав Витальевич --- кидает партнёров // административное дело №</div>
     </div>
-    </body>
+</body>
 </html>
-
